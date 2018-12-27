@@ -1,6 +1,10 @@
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.green {
+    color: #6ECF53;
 }
 
 /* 
@@ -209,16 +213,21 @@
 ╩╝ ║║ ║╬ ║╬ ╚═ ╠╗
 */
 .banner {
-    height: 560px;
-    padding-bottom: 15px;
-    background:
-        url('../images/banner_door_men_keys.png') no-repeat 90%/ contain, 
+    height: 580px;
+    background: 
+        /* url('../images/banner_door_men_keys.png') no-repeat 100% / contain, */
         linear-gradient(to right, rgba(208,230,197,1) 0%, rgba(255,255,255,1) 70%, rgba(208,230,197,1) 100%);
 }
 
-.banner__container {
+.banner .container {
     padding-top: 70px;
-    padding-right: 500px;
+    height: 100%;
+    background: url('../images/banner_door_men_keys.png') no-repeat 100% / contain;
+}
+
+.banner__container {
+    margin-right: 500px;
+    
 }
 
 .banner__head {
@@ -289,6 +298,12 @@
     color: #4A4A4A;
     border-bottom: #979797 1px dashed;
     margin-left: 15px; 
+    transition: .2s;
+}
+
+.services__link:hover {
+    color: #6ECF53;
+    border-color: #6ECF53;
 }
 
 .banner__form {
@@ -303,25 +318,50 @@
     margin-bottom: 20px; 
 }
 
+.form__main {
+    position: relative;
+    display: inline-block;
+}
+
 .form__main .input-phone {
     position: relative;
     border-radius: 30px;
     border: 1px solid #C5C3C3;
     padding: 20px 20px 20px 60px;
     font-weight: 600;
+    width: 400px;
+    transition: .2s;
 }
 
-.form__main .label-phone::before {
-    content: '';
+.form__main:hover .input-phone,
+.form__main:focus .input-phone{
+    border-color: #6ED249;
+}
+
+.input-phone:focus {
+    outline: none;
+}
+
+.form__main .logo-phone {    
     display: inline-block;
     position: absolute;
+    top: 20px;
+    left: 20px;
     width: 25px;
     height: 25px;
-    background: url('../images/phone.svg') no-repeat 50%;
+    background: url('../images/phone.svg') no-repeat 50% / cover;
+    z-index: 1;
 }
+
+.form__main:hover .logo-phone,
+.form__main:focus .logo-phone {
+    background-image: url('../images/phone_green.svg');
+}
+
 
 .form__main .send-phone {
     position: relative;
+    left: -60px;
     border-radius: 30px;
     border: 1px solid #F94E4E;
     padding: 20px;
@@ -329,4 +369,21 @@
     text-transform: uppercase;
     color: #fff;
     background: #F94E4E;
+    transition: .2s;
+}
+
+.form__main .send-phone:hover {
+    border-color: #fb2020;
+    background-color: #fb2020; 
+}
+/* 
+╦ ╔═ ╗╔ ╦ 
+║ ╠═ ╠╣ ║ 
+║ ╚═ ╝╚ ║ 
+*/
+.text__text {
+    font-size: 18px;
+    line-height: 39px;
+    max-width: 990px;
+    margin: 40px auto;
 }
