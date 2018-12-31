@@ -26,18 +26,19 @@
         padding-left: 10px;
         font-size: 22.6px;
         font-weight: 800;
-        color: #6ECF53;
+        color: $green-color;
     }
 }
 .info {
-    font-size: 15.28px;
-    color: #494D4B;
     float: right;
     padding-top: 30px;
+    font-size: 15.28px;
+    color: $grey-color;    
     .icon-marker,
     .icon-watch {
-        font-size: 20px;
         margin-right: 10px;
+        font-size: 20px;
+        color: $lightgrey-color;
     }
     &__region,
     &__work-time {
@@ -51,32 +52,32 @@
                 color: $green-color;
             }
             .phone__code,
-            .phone__number {
-                color: $green-color;
+            .phone__number {                
                 border-bottom-color: $green-color;
+                color: $green-color;
             }
         }
     }
     .icon-phone {
         display: inline-block;
-        color: $lightgrey-color;
         margin-right: 12px;
+        color: $lightgrey-color;
         transition: .2s;
     }
     .phone__code {
         display: inline-block;
-        color: $grey-color;
         margin-right: 12px;
         border-bottom: 1px solid $lightgrey-color;
         line-height: 30px;
+        color: $grey-color;
         transition: .2s;
     }
     .phone__number {
         display: inline-block;
-        color: $green-color;
         margin-right: 12px;
         border-bottom: 1px solid $green-color;
         line-height: 30px;
+        color: $green-color;
         transition: .2s;
     }
 }
