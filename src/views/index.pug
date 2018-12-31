@@ -61,41 +61,42 @@ html(lang="ru")
               span.green  скидка 40%
             ul.banner__services.services
               li.banner__service
-                i.icon-door             
+                i.service-icon.icon-door             
                 a.services__link(href="#") вскрытие&nbsp;замков
               
               li.banner__service
-                i.icon-car             
+                i.service-icon.icon-car             
                 a.services__link(href="#") вскрытие&nbsp;автомобилей
               
               li.banner__service
-                i.icon-padlock             
+                i.service-icon.icon-padlock             
                 a.services__link(href="#") замена&nbsp;замков
               
               li.banner__service
-                i.icon-safe             
+                i.service-icon.icon-safe             
                 a.services__link(href="#") вскрытие&nbsp;сейфов
               
               li.banner__service
-                i.icon-wrench             
+                i.service-icon.icon-wrench             
                 a.services__link(href="#") ремонт&nbsp;замков
               
               li.banner__service
-                i.icon-wrench_door
+                i.service-icon.icon-wrench_door
                 a.services__link(href="#") ремонт&nbsp;дверей
               
             
             .banner__form.form
               .form__head Заполните форму и вызовите мастера
-              .form__main              
-                input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Ваш телефон")
-                i.icon-phone                
-                button.send-phone вызвать срочно
+              .form__main
+                .form__input.form__input-phone              
+                  input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Ваш телефон")
+                  i.input-icon.icon-phone                
+                  button.send-phone вызвать срочно
       <!-- End Banner -->
       .text
         .container.text__container
           p.text__text
-            |Если вы потеряли ключи, вы можете заменить замок, произвести ремонт дверь (квартиры, офисы, сейфы и т.д.). В большинствесвоем работы не срочные, но требовательны к качеству выполнения, наличия у мастера при себе большогоассортимента замков и дверной фурнитуры, а так же <span class="green">высокого уровня</span> доверия к мастеру и в целок корганизации.
+            |Если вы потеряли ключи, вы можете заменить замок, произвести ремонт дверь (квартиры, офисы, сейфы и т.д.). В большинстве своем работы не срочные, но требовательны к качеству выполнения, наличия у мастера при себе большого ассортимента замков и дверной фурнитуры, а так же <span class="green">высокого уровня</span> доверия к мастеру и в целом к организации.
       <!-- Prices -->
       .prices
         .container.prices__container
@@ -105,23 +106,45 @@ html(lang="ru")
           .sub-head Закажите услугу и получите скидку 40%
           .prices__wrap
             .price-block
-              .price-block__icon.icon-door
+              i.price-block__icon.icon-door
               .price-block__head Вскрытие
               .price-block__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              .price-block__link Узнать больше
+              a.price-block__link.green(href="#") Узнать больше
           
             .price-block
-              .price-block__icon.icon-padlock
+              i.price-block__icon.icon-padlock
               .price-block__head Замена
               .price-block__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              .price-block__link Узнать больше
+              a.price-block__link.green(href="#") Узнать больше
           
             .price-block
-              .price-block__icon.icon-wrench
+              i.price-block__icon.icon-wrench
               .price-block__head Ремонт
               .price-block__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              .price-block__link Узнать больше
+              a.price-block__link.green(href="#") Узнать больше
       <!-- End Prices -->
+      <!-- Discont -->
+      .discont
+        .container.discont__container
+          .discont__form.form
+            .form__head.green Закажите услугу со скидкой 40%
+            .form__sub-head С нами надежно и выгодно
+            .form__main
+              .form__input.form__input-user
+                input.input.input-user(type="text" name="user" placeholder="Ваше имя")
+                i.input-icon.icon-user
+              .form__input.form__input-phone  
+                input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Ваш телефон")
+                i.input-icon.icon-phone                
+                button.send-phone Вызвать мастера
+              .form__check
+                label.label-check
+                  input.check(type="checkbox" name="agree")
+                  span.label-check__text Согласен на обработку персональных данных
+
+
+
+      <!-- End Discont -->
     <!-- Footer -->
     footer    
     <!-- End Footer -->
