@@ -51,55 +51,77 @@ html(lang="ru")
             li.desktop__item
               a.link(href="#") Отзывы
     <!-- End Menu -->
-    <main>
+    main
       <!-- Banner -->
-      <div class="banner">
-        <div class="container">
-          <div class="banner__container">
-            <div class="banner__head">
-              <span class="grey">вскрытие замков</span>
-              <span class="green">скидка 40%</span>
-            </div>
-            <ul class="banner__services services">
-              <li class="banner__service door">             
-                <a href="#" class="services__link">вскрытие&nbsp;замков</a>
-              </li>
-              <li class="banner__service car">             
-                <a href="#" class="services__link">вскрытие&nbsp;автомобилей</a>
-              </li>
-              <li class="banner__service padlock">             
-                <a href="#" class="services__link">замена&nbsp;замков</a>
-              </li>
-              <li class="banner__service safe">             
-                <a href="#" class="services__link">вскрытие&nbsp;сейфов</a>
-              </li>
-              <li class="banner__service spanner">             
-                <a href="#" class="services__link">ремонт&nbsp;замков</a>
-              </li>
-              <li class="banner__service spanner-door">
-                <a href="#" class="services__link">ремонт&nbsp;дверей</a>
-              </li>
-            </ul>
-            <div class="banner__form form">
-              <div class="form__head">Заполните форму и вызовите мастера</div>
-              <div class="form__main">              
-                <span class="logo-phone"></span>
-                <input id="input-phone" class="input-phone" type="text" name="phone" placeholder="Ваш телефон">                
-                <button class="send-phone">вызвать срочно</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      .banner
+        .container
+          .banner__container
+            .banner__head
+              span.grey вскрытие замков
+              span.green  скидка 40%
+            ul.banner__services.services
+              li.banner__service
+                i.icon-door             
+                a.services__link(href="#") вскрытие&nbsp;замков
+              
+              li.banner__service
+                i.icon-car             
+                a.services__link(href="#") вскрытие&nbsp;автомобилей
+              
+              li.banner__service
+                i.icon-padlock             
+                a.services__link(href="#") замена&nbsp;замков
+              
+              li.banner__service
+                i.icon-safe             
+                a.services__link(href="#") вскрытие&nbsp;сейфов
+              
+              li.banner__service
+                i.icon-wrench             
+                a.services__link(href="#") ремонт&nbsp;замков
+              
+              li.banner__service
+                i.icon-wrench_door
+                a.services__link(href="#") ремонт&nbsp;дверей
+              
+            
+            .banner__form.form
+              .form__head Заполните форму и вызовите мастера
+              .form__main              
+                input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Ваш телефон")
+                i.icon-phone                
+                button.send-phone вызвать срочно
       <!-- End Banner -->
-      <div class="text">
-        <div class="container text__container">
-          <p class="text__text">
+      .text
+        .container.text__container
+          p.text__text
             |Если вы потеряли ключи, вы можете заменить замок, произвести ремонт дверь (квартиры, офисы, сейфы и т.д.). В большинствесвоем работы не срочные, но требовательны к качеству выполнения, наличия у мастера при себе большогоассортимента замков и дверной фурнитуры, а так же <span class="green">высокого уровня</span> доверия к мастеру и в целок корганизации.
-          </p>
-        </div>
-      </div>
-    </main>
+      <!-- Prices -->
+      .prices
+        .container.prices__container
+          .head
+            span.grey Наши
+            span.green цены
+          .sub-head Закажите услугу и получите скидку 40%
+          .prices__wrap
+            .price-block
+              .price-block__icon.icon-door
+              .price-block__head Вскрытие
+              .price-block__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              .price-block__link Узнать больше
+          
+            .price-block
+              .price-block__icon.icon-padlock
+              .price-block__head Замена
+              .price-block__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              .price-block__link Узнать больше
+          
+            .price-block
+              .price-block__icon.icon-wrench
+              .price-block__head Ремонт
+              .price-block__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              .price-block__link Узнать больше
+      <!-- End Prices -->
     <!-- Footer -->
-    <footer></footer>    
+    footer    
     <!-- End Footer -->

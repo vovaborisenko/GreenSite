@@ -9,6 +9,10 @@
     margin: 0 auto;
 }
 
+.green {
+    color: $green-color;
+}    
+
 [class*="icon-"] {
     font-family: "icons";
 		-webkit-font-smoothing: antialiased;
@@ -24,188 +28,11 @@
 
 @import "./partials/header";                
 @import "./partials/nav";
+@import "./partials/banner";
+@import "./partials/text";     
 /* 
 ╔╦╗ ╔╗ ╦╗ ╦ ║ ╔═ ─ ╔╦╗ ╔═ ║║ ║║ 
 ║║║ ║║ ╠╣ ║ ║ ╠═ ─ ║║║ ╠═ ╬║ ║║ 
 ║║║ ╚╝ ╩╝ ╩ ╚ ╚═ ─ ║║║ ╚═ ║╬ ╚╝ 
 */
-/* 
-╦╗ ╔╗ ║║ ║║ ╔═ ╔╗ 
-╠╣ ╠╣ ╬║ ╬║ ╠═ ╠╝ 
-╩╝ ║║ ║╬ ║╬ ╚═ ╠╗
-*/
-.banner {
-    height: 580px;
-    background: 
-        /* url('../images/banner_door_men_keys.png') no-repeat 100% / contain, */
-        linear-gradient(to right, rgba(208,230,197,1) 0%, rgba(255,255,255,1) 70%, rgba(208,230,197,1) 100%);
-}
 
-.banner .container {
-    padding-top: 70px;
-    height: 100%;
-    background: url('../images/banner_door_men_keys.png') no-repeat 100% / contain;
-}
-
-.banner__container {
-    margin-right: 500px;
-    
-}
-
-.banner__head {
-    font-weight: bold;
-    line-height: 40px;
-    font-size: 35.6px;
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #151D2A;
-}
-
-.banner__head .green {
-    color: #6ECF53;
-}
-
-.banner__services {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    list-style: none;
-
-}
-
-.banner__service {
-    flex: 50%;
-    margin-top: 20px; 
-}
-
-.banner__service::before {
-    content: '';
-    display: inline-block;
-    position: relative;
-    top: 10px;
-    width: 37px;
-    height: 37px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.door::before {
-    background-image: url('../images/__Door.png');
-}
-
-.car::before {
-    background-image: url('../images/__Car.png');
-}
-
-.padlock::before {
-    background-image: url('../images/__Lock.png');
-}
-
-.safe::before {
-    background-image: url('../images/__Seif.png');
-}
-
-.spanner::before {
-    background-image: url('../images/__Repair.png');
-}
-
-.spanner-door::before {
-    background-image: url('../images/__Door\ repair.png');
-}
-
-.services__link {
-    font-size: 20px;
-    font-weight: 600;
-    color: #4A4A4A;
-    border-bottom: #979797 1px dashed;
-    margin-left: 15px; 
-    transition: .2s;
-}
-
-.services__link:hover {
-    color: #6ECF53;
-    border-color: #6ECF53;
-}
-
-.banner__form {
-    text-align: center;
-    padding-top: 50px;
-    font-size: 16px;
-}
-
-.form__head {
-    font-size: 18px;
-    color: #494D4B;
-    margin-bottom: 20px; 
-}
-
-.form__main {
-    position: relative;
-    display: inline-block;
-}
-
-.form__main .input-phone {
-    position: relative;
-    border-radius: 30px;
-    border: 1px solid #C5C3C3;
-    padding: 20px 20px 20px 60px;
-    font-weight: 600;
-    width: 400px;
-    transition: .2s;
-}
-
-.form__main:hover .input-phone,
-.form__main:focus .input-phone{
-    border-color: #6ED249;
-}
-
-.input-phone:focus {
-    outline: none;
-}
-
-.form__main .logo-phone {    
-    display: inline-block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 25px;
-    height: 25px;
-    background: url('../images/phone.svg') no-repeat 50% / cover;
-    z-index: 1;
-}
-
-.form__main:hover .logo-phone,
-.form__main:focus .logo-phone {
-    background-image: url('../images/phone_green.svg');
-}
-
-
-.form__main .send-phone {
-    position: relative;
-    left: -60px;
-    border-radius: 30px;
-    border: 1px solid #F94E4E;
-    padding: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fff;
-    background: #F94E4E;
-    transition: .2s;
-}
-
-.form__main .send-phone:hover {
-    border-color: #fb2020;
-    background-color: #fb2020; 
-}
-/* 
-╦ ╔═ ╗╔ ╦ 
-║ ╠═ ╠╣ ║ 
-║ ╚═ ╝╚ ║ 
-*/
-.text__text {
-    font-size: 18px;
-    line-height: 39px;
-    max-width: 990px;
-    margin: 40px auto;
-}

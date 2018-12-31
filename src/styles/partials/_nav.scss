@@ -44,7 +44,7 @@
         z-index: 5;
     }
     .link {
-        padding: 0 20px;
+        padding: 0 35px;
         color: $grey-color;
         transition: .2s;
     }
@@ -60,7 +60,7 @@
         transition: .3s;
         .desktop__item {
             padding: 0;            
-            min-width: 30%;
+            width: 30%;
             text-align: left;
             color: $grey-color;
             transition: .2s;
