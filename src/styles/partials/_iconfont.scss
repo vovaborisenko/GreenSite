@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "icons";
+	src: url('../../dest/fonts/icons.eot');
+	src: url('../../dest/fonts/icons.eot?#iefix') format('eot'),
+		url('../../dest/fonts/icons.woff2') format('woff2'),
+		url('../../dest/fonts/icons.woff') format('woff'),
+		url('../../dest/fonts/icons.ttf') format('truetype'),
+		url('../../dest/fonts/icons.svg#icons') format('svg');
+}
+
+.icon:before {
+	font-family: "icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-car:before {
+	content: "\E001";
+}
+
+.icon-door:before {
+	content: "\E002";
+}
+
+.icon-marker:before {
+	content: "\E003";
+}
+
+.icon-marker1:before {
+	content: "\E004";
+}
+
+.icon-padlock:before {
+	content: "\E005";
+}
+
+.icon-phone:before {
+	content: "\E006";
+}
+
+.icon-pin:before {
+	content: "\E007";
+}
+
+.icon-safe:before {
+	content: "\E008";
+}
+
+.icon-user:before {
+	content: "\E009";
+}
+
+.icon-watch:before {
+	content: "\E00A";
+}
+
+.icon-wrench:before {
+	content: "\E00B";
+}
+
+.icon-wrench_door:before {
+	content: "\E00C";
+}

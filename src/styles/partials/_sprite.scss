@@ -1,0 +1,128 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../img/sprites/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 4.4em 44.6em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../img/sprites/sprite.png");
+}
+
+
+
+  .icon.car:before {
+      background-position: 0em 0em;
+      width: 4.4em;
+      height: 4.4em;
+  }
+
+
+
+
+  .icon.door:before {
+      background-position: 0em -4.4em;
+      width: 4.4em;
+      height: 4.4em;
+  }
+
+
+
+
+  .icon.marker:before {
+      background-position: 0em -8.8em;
+      width: 2.254em;
+      height: 3.199em;
+  }
+
+
+
+
+  .icon.marker1:before {
+      background-position: 0em -12em;
+      width: 3.2em;
+      height: 3.2em;
+  }
+
+
+
+
+  .icon.padlock:before {
+      background-position: 0em -15.2em;
+      width: 4.4em;
+      height: 4.4em;
+  }
+
+
+
+
+  .icon.phone:before {
+      background-position: 0em -19.6em;
+      width: 2.6em;
+      height: 2.6em;
+  }
+
+
+
+
+  .icon.pin:before {
+      background-position: 0em -22.2em;
+      width: 3.4em;
+      height: 3.4em;
+  }
+
+
+
+
+  .icon.safe:before {
+      background-position: 0em -25.6em;
+      width: 4.4em;
+      height: 4.4em;
+  }
+
+
+
+
+  .icon.user:before {
+      background-position: 0em -30em;
+      width: 2.6em;
+      height: 2.6em;
+  }
+
+
+
+
+  .icon.watch:before {
+      background-position: 0em -32.6em;
+      width: 3.2em;
+      height: 3.2em;
+  }
+
+
+
+
+  .icon.wrench:before {
+      background-position: 0em -35.8em;
+      width: 4.4em;
+      height: 4.4em;
+  }
+
+
+
+
+  .icon.wrench_door:before {
+      background-position: 0em -40.2em;
+      width: 4.4em;
+      height: 4.4em;
+  }
+
+
+
+
+

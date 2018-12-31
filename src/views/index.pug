@@ -1,0 +1,98 @@
+doctype html
+html(lang="ru")
+  include blocks/head.pug
+  body
+    <!-- Header -->
+    header.header
+      .container
+        a.logo(href="/", title="Главная страница | Служба замков")
+          img.logo__img(src="../dest/img/logo.png", alt="Главная страница | Служба замков", title="Главная страница | Служба замков")
+          .logo__name Служба замков
+        .info
+          i.icon-marker
+          span.info__region
+            |Москва и Московская область
+          i.icon-watch
+          span.info__work-time
+            |Круглосуточно
+          a.info__phone.phone(href="tel:84958888888")
+            i.icon-phone
+            span.phone__code 8 495
+            span.phone__number 888-88-88
+    <!-- End Header -->
+    <!-- Menu -->
+    <nav class="nav">
+      <div class="nav__mobile"></div>  
+      <div class="nav__desktop">
+          <ul class="desktop__items">
+            <li class="desktop__item"><a href="#" class="link">О&nbsp;нас</a></li>
+            <li class="desktop__item "><a href="#" class="link">Наши&nbsp;услуги</a>
+              <ul class="desktop__items desktop__item-parent">
+                <li class="desktop__item"><a href="#" class="link">Вскрытие&nbsp;дверей </a></li>
+                <li class="desktop__item"><a href="#" class="link">Ремонт&nbsp;замков</a></li>
+                <li class="desktop__item"><a href="#" class="link">Замена&nbsp;замков</a></li>
+                <li class="desktop__item"><a href="#" class="link">Вскрытие&nbsp;сейфов</a></li>
+                <li class="desktop__item"><a href="#" class="link">Вскрытие&nbsp;автомобилей</a></li>
+                <li class="desktop__item"><a href="#" class="link">Ремонт&nbsp;дверей</a></li>
+              </ul>
+            </li>
+            <li class="desktop__item"><a href="#" class="link">Цены</a></li>
+            <li class="desktop__item"><a href="#" class="link">Контакты</a></li>
+            <li class="desktop__item"><a href="#" class="link">Вопросы&nbsp;и&nbsp;ответы</a></li>
+            <li class="desktop__item"><a href="#" class="link">Отзывы</a></li>
+          </ul>
+      </div>
+    </nav>
+    <!-- End Menu -->
+    <main>
+      <!-- Banner -->
+      <div class="banner">
+        <div class="container">
+          <div class="banner__container">
+            <div class="banner__head">
+              <span class="grey">вскрытие замков</span>
+              <span class="green">скидка 40%</span>
+            </div>
+            <ul class="banner__services services">
+              <li class="banner__service door">             
+                <a href="#" class="services__link">вскрытие&nbsp;замков</a>
+              </li>
+              <li class="banner__service car">             
+                <a href="#" class="services__link">вскрытие&nbsp;автомобилей</a>
+              </li>
+              <li class="banner__service padlock">             
+                <a href="#" class="services__link">замена&nbsp;замков</a>
+              </li>
+              <li class="banner__service safe">             
+                <a href="#" class="services__link">вскрытие&nbsp;сейфов</a>
+              </li>
+              <li class="banner__service spanner">             
+                <a href="#" class="services__link">ремонт&nbsp;замков</a>
+              </li>
+              <li class="banner__service spanner-door">
+                <a href="#" class="services__link">ремонт&nbsp;дверей</a>
+              </li>
+            </ul>
+            <div class="banner__form form">
+              <div class="form__head">Заполните форму и вызовите мастера</div>
+              <div class="form__main">              
+                <span class="logo-phone"></span>
+                <input id="input-phone" class="input-phone" type="text" name="phone" placeholder="Ваш телефон">                
+                <button class="send-phone">вызвать срочно</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Banner -->
+      <div class="text">
+        <div class="container text__container">
+          <p class="text__text">
+            |Если вы потеряли ключи, вы можете заменить замок, произвести ремонт дверь (квартиры, офисы, сейфы и т.д.). В большинстве своем работы не срочные, но требовательны к качеству выполнения, наличия у мастера при себе большого ассортимента замков и дверной фурнитуры, а так же <span class="green">высокого уровня</span> доверия к мастеру и в целок к организации. 
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer></footer>    
+    <!-- End Footer -->
