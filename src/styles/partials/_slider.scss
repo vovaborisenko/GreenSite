@@ -1,7 +1,31 @@
 .slider {
+    position: relative;
     text-align: center;
     .head {
         margin-top: 95px;
+    }
+    &__controls {
+        position: absolute;
+        right: 10%;
+        .arrow {
+            display: inline-block;
+            width: 84px;
+            height: 84px;
+            background: url(../img/arrow_left.png) no-repeat 50% / cover;
+            transform: scale(0.73);
+            cursor: pointer;
+            &.right {
+                transform: rotateY(180deg) scale(0.73);
+            }
+            &:hover {
+                background: url(../img/arrow_left_hover.png) no-repeat 50% / cover;
+                transform: none;
+                &.left {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+
     }
     &__wrap {
         padding-top: 85px;
@@ -31,6 +55,18 @@
         transition: .2s;
         &:hover {
             color: $green-color;
+        }
+    }
+}
+
+.cars {
+    .head {
+        margin-top: 158px;
+    }
+    .slide {
+        &__head {
+            margin-top: 93px;
+            margin-bottom: 11px;
         }
     }
 }
