@@ -1,0 +1,28 @@
+.video {
+    text-align: center;
+    .head {
+        margin-top: 165px;
+        margin-bottom: 60px;
+    }
+    .main {
+        max-width: 1056px;
+        max-height: 556px;
+        padding: 0 35px;
+        margin: 0 auto;
+    }
+}
+.plyr__controls {
+    button:hover {
+        background-color: $green-color !important;
+    }
+    input[type="range"] {
+        color: $green-color !important;
+    }
+}
+.plyr__control--overlaid {
+    background-color: $green-color !important;
+    box-shadow: 0 0 0 5px $transparentgreen-color !important;
+}
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+    background: $green-color;
+}

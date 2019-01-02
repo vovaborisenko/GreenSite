@@ -3,11 +3,7 @@
     text-align: center;
     .head {
         margin-top: 105px;
-        margin-bottom: 5px;
-        font-weight: bold;
-        line-height: 50px;
-        font-size: 35.3px;
-        text-transform: uppercase;
+        margin-bottom: 8px;
     }
     .sub-head {
         font-weight: 600;
@@ -32,20 +28,17 @@
         font-weight: 600;
         line-height: 40px;
         font-size: 27.9557px;
-        text-align: center;
     }
     &__text {
         margin-bottom: 75px;
         font-weight: 600;
         line-height: 24px;
         font-size: 16px;
-        text-align: center;
     }
     &__link {
         font-weight: 300;
         line-height: 25px;
         font-size: 16px;
-        text-align: center;
         transition: .2s;
         &:hover {
             color: $darkgrey-color;

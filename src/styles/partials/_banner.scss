@@ -12,7 +12,7 @@
         background: url('../img/banner_door.png') no-repeat 100% / contain;
     }
     .banner__container {
-        margin-right: 500px;
+        width: 656px;
         margin-left: 44px;    
     }
     .banner__head {
@@ -58,12 +58,14 @@
         text-align: center;
         font-size: 16px;
     }
-    .form__head {
-        font-size: 18px;
-        color: $grey-color;
-        margin-bottom: 20px; 
-    }
-    .input-phone {
-        width: 400px;
+    .form {
+        &__head {
+            font-size: 18px;
+            color: $grey-color;
+            margin-bottom: 20px; 
+        }
+        &__input-phone {
+            width: 75%;
+        }
     }
 }

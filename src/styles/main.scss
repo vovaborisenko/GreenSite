@@ -11,7 +11,13 @@
 
 .green {
     color: $green-color;
-}    
+}   
+
+.head {
+    font-size: 35.3px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 [class*="icon-"] {
     font-family: "icons";
@@ -29,10 +35,12 @@
 @import "./partials/header";                
 @import "./partials/nav";
 @import "./partials/banner";
-@import "./partials/form";       
+@import "./partials/form";             
 @import "./partials/text";  
 @import "./partials/prices";
-@import "./partials/discont";         
+@import "./partials/discont";   
+@import "./partials/video";  
+@import "./partials/slider";           
            
 /* 
 ╔╦╗ ╔╗ ╦╗ ╦ ║ ╔═ ─ ╔╦╗ ╔═ ║║ ║║ 

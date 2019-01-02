@@ -5,11 +5,12 @@
         position: absolute;
         left: 21px;
         top: 17px;
-        font-size: 28px;
+        font-size: 24px;
         color: $lightgrey-color;
     }
     .input {
         position: relative;
+        width: 100%;
         border-radius: 30px;
         border: 1px solid $superlightgrey-color;
         padding: 13px 20px 13px 60px;
@@ -34,8 +35,9 @@
         }
     }
     .send-phone {
-        position: relative;
-        left: -60px;
+        position: absolute;
+        right:  0;
+        top: 0;
         border-radius: 30px;
         border: 1px solid $pink-color;
         padding: 17px 20px;

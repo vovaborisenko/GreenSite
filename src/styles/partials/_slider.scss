@@ -1,0 +1,36 @@
+.slider {
+    text-align: center;
+    .head {
+        margin-top: 95px;
+    }
+    &__wrap {
+        padding-top: 85px;
+    }
+}
+
+.slide {
+    display: inline-block;
+    width: 30%;
+    &__img {
+        max-width: 100%;
+    }
+    &__head {
+        margin-top: 115px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 28.1px;      
+    }
+    &__text {
+        margin-bottom: 75px;
+        font-weight: normal;
+        font-size: 20.3px;
+    }
+    &__link {
+        display: block;
+        color: $darkgrey-color;
+        transition: .2s;
+        &:hover {
+            color: $green-color;
+        }
+    }
+}

@@ -10,31 +10,31 @@
         background: $white-color;
         opacity: .87;
     }
-    .form__head {
+    .form {
+        &__head {
         font-weight: bold;
         line-height: 54px;
         font-size: 35.3px;
         text-transform: uppercase;
-    }
-    .form__sub-head {
-        margin: 29px 0;
-        line-height: 42px;
-        font-size: 27.9px;
-    }
-    .form__input-user {
-        margin-right: 15px;
-        .input-user {
-            width: 335px;
         }
-    }    
-    .input-phone {
-        width: 335px;
-    }
-    .form__check {
-        margin-top: 55px;
-        .label-check {
-            line-height: 22px;
-            font-size: 13px;
+        &__sub-head {
+            margin: 29px 0;
+            line-height: 42px;
+            font-size: 27.9px;
         }
-    }    
+        &__input-user {
+            margin-right: 15px;
+            width: 40%;
+        } 
+        &__input-phone {
+            width: 55%;
+        }
+        &__check {
+            margin-top: 55px;
+            .label-check {
+                line-height: 22px;
+                font-size: 13px;
+            }
+        }
+    }           
 }

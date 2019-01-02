@@ -102,7 +102,7 @@ html(lang="ru")
         .container.prices__container
           .head
             span.grey Наши
-            span.green цены
+            span.green  цены
           .sub-head Закажите услугу и получите скидку 40%
           .prices__wrap
             .price-block
@@ -139,12 +139,43 @@ html(lang="ru")
                 button.send-phone Вызвать мастера
               .form__check
                 label.label-check
-                  input.check(type="checkbox" name="agree")
+                  input.check(type="checkbox" name="agree" checked)
                   span.label-check__text Согласен на обработку персональных данных
-
-
-
       <!-- End Discont -->
+      <!-- Video -->
+      .video
+        .container.video__container
+          .head Видео
+          .main
+            .plyr__video-embed#player
+              iframe(src="https://youtu.be/QpKZAFxZvVo" allowfullscreen allowtransparency allow="autoplay")
+            <script>const player = new Plyr('#player');</script>
+      <!-- End Video -->
+      <!-- Locks -->
+      .slider.locks
+        .container.slider__container
+          .head
+            span.grey мы работаем
+            span.green   с замками
+          .slider__wrap
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/locks/lock_mottura.png")
+                .slide__head Mottura
+                .slide__text Время замены 20 минут
+            
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/locks/lock_cisa.png")
+                .slide__head Cisa
+                .slide__text Время замены 20 минут
+
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/locks/lock_guardian.png")
+                .slide__head Guardian
+                .slide__text Время замены 20 минут
+      <!-- End Locks -->
     <!-- Footer -->
     footer    
     <!-- End Footer -->
