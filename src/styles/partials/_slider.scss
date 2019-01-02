@@ -42,7 +42,10 @@
         margin-top: 115px;
         margin-bottom: 5px;
         font-weight: bold;
-        font-size: 28.1px;      
+        font-size: 28.1px; 
+        .nostrong {
+            font-weight: normal;
+        }     
     }
     &__text {
         margin-bottom: 75px;
@@ -64,8 +67,11 @@
         margin-top: 158px;
     }
     .slide {
+        &__img {
+            margin-top: 45px;
+        }
         &__head {
-            margin-top: 93px;
+            margin-top: 61px;
             margin-bottom: 11px;
         }
     }

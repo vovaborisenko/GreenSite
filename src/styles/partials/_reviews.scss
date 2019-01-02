@@ -1,0 +1,56 @@
+.reviews {
+    text-align: center;
+    .head {
+        margin-top: 91px;
+        margin-bottom: 101px; 
+    }
+}
+.review {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    padding: 9px 15px 0 108px;
+    text-align: left;
+    &:nth-child(3n-1) {
+        margin: 0 30px;
+    }
+    &__photo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        clip-path: circle(41px at center);
+    }
+    &__name {
+        font-size: 25.5px;
+        font-weight: 300;
+    }
+    &__city {
+        margin: 5px 0 26px;
+        font-size: 20.2px;
+        font-weight: 300;
+    }
+    &__text {
+        font-size: 16px;
+    }
+    &__date {
+        margin-top: 20px;
+        font-size: 18.1px;
+        font-weight: 300;
+    }
+}
+.more {
+    margin-top: 48px;
+    text-align: right;
+    &__feedback,
+    &__reviews {
+        margin-right: 25px;
+        font-size: 16px;
+        color: $darkgrey-color;
+        border-bottom: 1px $lightgrey-color dashed;
+        cursor: pointer;
+        &:hover {
+            color: $green-color;
+            border-color: $green-color;
+        }
+    }
+}
