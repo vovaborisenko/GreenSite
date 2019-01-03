@@ -17,6 +17,7 @@
     width: 30%;
     &__img {
         max-width: 100%;
+        margin: 0 auto;
     }
     &__head {
         margin-top: 115px;
@@ -41,23 +42,37 @@
         }
     }
 }
-
-.controls {
-    position: absolute;
-    .arrow {
+.slick-list {
+    overflow: hidden;
+}
+.slick-slider {
+    outline: 0;
+}
+.controls,
+.slick-slider {    
+    .arrow,
+    .slick-arrow {
+        position: absolute;
+        top: 57px;
+        right: 15%;
+        border: none;
+        font-size: 0;
         display: inline-block;
         width: 84px;
         height: 84px;
         background: url(../img/arrow_left.png) no-repeat 50% / cover;
         transform: scale(0.73);
         cursor: pointer;
-        &.right {
+        &.right,
+        &.slick-next {
+            right: 5%;
             transform: rotate(180deg) scale(0.73);
         }
         &:hover {
             background: url(../img/arrow_right_hover.png) no-repeat 50% / cover;
             transform: none;
-            &.left {
+            &.left,
+            &.slick-prev {
                 transform: rotateY(180deg);
             }
         }

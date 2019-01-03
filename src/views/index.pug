@@ -31,7 +31,7 @@ html(lang="ru")
               a.link(href="#") Наши&nbsp;услуги
               ul.desktop__items.desktop__item-parent
                 li.desktop__item
-                  a.link(href="#") Вскрытие&nbsp;дверей
+                  a.link(href="#") Вскрытие&nbsp;дверей  
                 li.desktop__item
                   a.link(href="#") Ремонт&nbsp;замков
                 li.desktop__item
@@ -178,6 +178,24 @@ html(lang="ru")
                 img.slide__img(src="../dest/img/locks/lock_guardian.png")
                 .slide__head Guardian
                 .slide__text Время замены 20 минут
+            
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/locks/lock_mottura.png")  
+                .slide__head Mottura
+                .slide__text Время замены 20 минут
+            
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/locks/lock_cisa.png")
+                .slide__head Cisa
+                .slide__text Время замены 20 минут
+
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/locks/lock_guardian.png")
+                .slide__head Guardian
+                .slide__text Время замены 20 минут
       <!-- End Locks -->
       <!-- Cars -->
       .slider.cars
@@ -189,6 +207,30 @@ html(lang="ru")
             .arrow.left
             .arrow.right
           .slider__wrap
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/cars/car_hyundai.png")
+                .slide__head 
+                  span.nostrong Hyundai 
+                  | Cerato
+                .slide__text Время вскрытия 11 минут
+            
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/cars/car_bmw.png")
+                .slide__head 
+                  span.nostrong BMW
+                  | Series
+                .slide__text Время вскрытия 15 минут
+
+            .slide
+              a.slide__link(href="#")
+                img.slide__img(src="../dest/img/cars/car_mercedes.png")
+                .slide__head 
+                  span.nostrong Mercedes
+                    | Benz
+                .slide__text Время вскрытия 17 минут
+            
             .slide
               a.slide__link(href="#")
                 img.slide__img(src="../dest/img/cars/car_hyundai.png")
@@ -251,19 +293,60 @@ html(lang="ru")
             span.grey Наши
             span.green  офисы
           .offices__main
-            .tabs
-              .tab.active Москва
-              .tab Подмосковье
-            .office__data
-              .office__name.green 
-                .name__point 
-                  .point__text M
-                |Марксистская
-              .office__address ул. Марксистская, д 147а офис 155
-              .office__phone + 495 888-88-88
-              .controls.office__controls
-                .arrow.left
-                .arrow.right
+            input#place1(type="radio", name="place" checked) 
+            label.tab(for="place1") Москва  
+            input#place2(type="radio", name="place") 
+            label.tab(for="place2") Подмосковье 
+            .offices__wrap.section_1
+              .office__data
+                .office__name.green 
+                  .name__point 
+                    .point__text M
+                  |Марксистская
+                .office__address ул. Марксистская, д 147а офис 155
+                .office__phone + 495 888-88-88
+
+              .office__data
+                .office__name.green 
+                  .name__point 
+                    .point__text Л
+                  |Ленинистская
+                .office__address ул. Ленинистская, д 155 офис 147ф
+                .office__phone + 495 555-55-55
+              
+              .office__data
+                .office__name.green 
+                  .name__point 
+                    .point__text Э
+                  |Энгельсистская
+                .office__address ул. Энгельсистская, д 7з офис 14
+                .office__phone + 495 333-33-33
+            
+            .offices__wrap.section_2
+              .office__data
+                .office__name.green 
+                  .name__point 
+                    .point__text M
+                  |Марксистская
+                .office__address Одинцово, <br>ул. Марксистская, д 147а офис 155
+                .office__phone + 495 888-88-88
+
+              .office__data
+                .office__name.green 
+                  .name__point 
+                    .point__text Л
+                  |Ленинистская
+                .office__address Коралева, <br>ул. Ленинистская, д 155 офис 147ф
+                .office__phone + 495 555-55-55
+              
+              .office__data
+                .office__name.green 
+                  .name__point 
+                    .point__text Э
+                  |Энгельсистская
+                .office__address Химки, <br>ул. Энгельсистская, д 7з офис 14
+                .office__phone + 495 333-33-33
+              
             .offices__map
       <!-- End Map -->
     <!-- Footer -->
@@ -301,6 +384,7 @@ html(lang="ru")
               input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Телефон")
               i.input-icon.icon-phone                
               button.send-phone вызвать срочно
-
         .footer__copy-right &copy; 2019-2022 &laquo;Логотип&raquo;
+  
     <!-- End Footer -->
+    script(src="../dest/js/main.min.js")
