@@ -52,10 +52,10 @@
         transform: scale(0.73);
         cursor: pointer;
         &.right {
-            transform: rotateY(180deg) scale(0.73);
+            transform: rotate(180deg) scale(0.73);
         }
         &:hover {
-            background: url(../img/arrow_left_hover.png) no-repeat 50% / cover;
+            background: url(../img/arrow_right_hover.png) no-repeat 50% / cover;
             transform: none;
             &.left {
                 transform: rotateY(180deg);

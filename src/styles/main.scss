@@ -1,11 +1,12 @@
 @import "./partials/normalize";
 @import "./partials/variables";
 @import "./partials/sprite";
-@import "./partials/iconfont";
+@import "./partials/iconfont";             
 
 
 .container {
-    max-width: 1200px;
+    position: relative;
+    max-width: 1200px;    
     margin: 0 auto;
 }
 
@@ -42,11 +43,6 @@
 @import "./partials/video";  
 @import "./partials/slider"; 
 @import "./partials/reviews"; 
-@import "./partials/map";                                  
-           
-/* 
-╔╦╗ ╔╗ ╦╗ ╦ ║ ╔═ ─ ╔╦╗ ╔═ ║║ ║║ 
-║║║ ║║ ╠╣ ║ ║ ╠═ ─ ║║║ ╠═ ╬║ ║║ 
-║║║ ╚╝ ╩╝ ╩ ╚ ╚═ ─ ║║║ ╚═ ║╬ ╚╝ 
-*/
+@import "./partials/offices";     
+@import "./partials/footer";     
 

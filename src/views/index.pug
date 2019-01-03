@@ -157,7 +157,7 @@ html(lang="ru")
           .head
             span.grey мы работаем
             span.green   с замками
-          .slider__controls
+          .slider__controls.controls
             .arrow.left
             .arrow.right
           .slider__wrap
@@ -243,26 +243,64 @@ html(lang="ru")
           .more
             span.more__reviews Еще 25 отзывов
             span.more__feedback Оставить отзыв
-    <!-- End Reviews -->
-    <!-- Map -->
-    .offices
-      .container.offices__container
-        .head.offices__head
-          span.grey Наши
-          span.green  офисы
-        .offices__main
-          .tabs
-            .tab.active Москва
-            .tab Подмосковье
-          .office__data
-            .office__name.green Марксистская
-            .office__address ул. Марксистская, д 147а офис 155
-            .office__phone + 495 888-88-88
-            .controls.office__controls
-              .arrow.left
-              .arrow.right
-            .office__map
-    <!-- End Map -->
+      <!-- End Reviews -->
+      <!-- Map -->
+      .offices
+        .container.offices__container
+          .head.offices__head
+            span.grey Наши
+            span.green  офисы
+          .offices__main
+            .tabs
+              .tab.active Москва
+              .tab Подмосковье
+            .office__data
+              .office__name.green 
+                .name__point 
+                  .point__text M
+                |Марксистская
+              .office__address ул. Марксистская, д 147а офис 155
+              .office__phone + 495 888-88-88
+              .controls.office__controls
+                .arrow.left
+                .arrow.right
+            .offices__map
+      <!-- End Map -->
     <!-- Footer -->
-    footer    
+    footer.footer
+      .container.footer__container
+        .footer__top
+          a.logo(href="/", title="Главная страница | Служба замков")
+            img.logo__img(src="../dest/img/logo.png", alt="Главная страница | Служба замков", title="Главная страница | Служба замков")
+            .logo__name Служба замков
+          nav.footer__menu
+            ul.menu__items
+              li.item
+                a.link О нас
+              
+              li.item
+                a.link Цены
+              
+              li.item
+                a.link Контакты
+              
+              li.item
+                a.link Вопросы и ответы
+              
+              li.item
+                a.link Отзывы
+          .info
+            a.info__phone.phone(href="tel:84958888888")
+              span.phone__code 8 495
+              span.phone__number.green 888-88-88
+            .info__sub-text
+        .footer__form.form
+          .form__head Введите телефон и вызовите мастера
+          .form__main
+            .form__input.form__input-phone              
+              input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Телефон")
+              i.input-icon.icon-phone                
+              button.send-phone вызвать срочно
+
+        .footer__copy-right &copy; 2019-2022 &laquo;Логотип&raquo;
     <!-- End Footer -->
