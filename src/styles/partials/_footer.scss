@@ -36,6 +36,10 @@
             font-weight: bold;
             .link {
                 color: $white-color;
+                transition: .2s;
+                &:hover {
+                    color: $green-color;
+                }
             }
         }
     }
@@ -48,7 +52,7 @@
         .phone {
             font-size: 24.7px;
             &__code {
-            color: $white-color;                
+                color: $white-color;                
             }
         }
     }

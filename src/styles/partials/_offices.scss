@@ -100,6 +100,13 @@
     }
     &__phone {
         margin: 16px 0 43px;
+        a {
+            color: $darkgrey-color;
+            transition: .2s;
+            &:hover {
+                color: $green-color;
+            }
+        }
     }
     &__controls {
         position: relative;
