@@ -60,10 +60,28 @@
         margin: 73px 0 118px;
         .form__head {
             margin-bottom: 17px;
+            opacity: .64;
         }
         .form__input {
             width: 495px;
             color: $darkgrey-color;
         }
+    }
+    &__copy-right {
+        opacity: .27;
+    }
+}
+@media all and (max-width: 1200px) {
+    .footer__container {
+        padding-bottom: 43px;
+    }
+    .footer__info {
+        text-align: center;
+    }
+    .footer__form {
+        margin-bottom: 48px;
+    }
+    .info__sub-text {
+        display: block;
     }
 }

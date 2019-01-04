@@ -77,4 +77,21 @@
     }
 }
 
-
+@media all and (max-width: 1200px) {
+    .header .container {
+        max-width: 720px;
+    }
+    .logo__name {
+        font-size: 18.6px;
+    }
+    .header .info {
+        width: 475px;
+        font-size: 15.2px;
+        text-align: center;
+        &__phone {
+            display: inline-block;
+            padding-top: 20px;
+            font-size: 24.4px;        
+        }
+    }
+}

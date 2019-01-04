@@ -64,3 +64,18 @@
         }
     }
 }
+@media all and (max-width: 1200px) {
+    .banner {
+        height: 566px;
+        background: url(../img/banner_door.png) no-repeat 120% / contain,
+            linear-gradient(to right, rgba(208,230,197,1) 0%, rgba(255,255,255,1) 70%, rgba(208,230,197,1) 100%);
+    }
+    .banner .container {
+        background: unset;
+    }
+    .banner__container {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: $transparentwhite-color;
+    }
+}

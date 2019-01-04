@@ -32,6 +32,10 @@
     text-transform: none;
     vertical-align: middle;        
 }
+
+.unvisible {
+    display: none;     
+}
       
 
 @import "./partials/header";                
@@ -47,3 +51,8 @@
 @import "./partials/offices";     
 @import "./partials/footer";     
 
+@media all and (max-width: 1200px) {                  
+    .container {
+        max-width: 756px;
+    }
+}

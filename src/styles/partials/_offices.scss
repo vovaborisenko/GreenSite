@@ -76,6 +76,7 @@
     &__data {
         display: inline-block;
         font-size: 20.3px;
+        outline: unset;
         .name__point {
             display: inline-block;
             position: relative;
@@ -110,5 +111,36 @@
     }
     &__controls {
         position: relative;
+    }
+}
+@media all and (max-width: 1200px) {
+    .offices__container {
+        padding-left: 0;
+    }
+    .offices .head {
+        margin-top: 80px;
+        text-align: center;
+    }
+    .offices .tab {
+        top: 21px;
+        left: 430px;
+    }
+    .offices__map {
+        bottom: -130px;
+        width: 46%;
+    }
+    .office__data {
+        padding-right: 360px;
+        text-align: center;
+    }
+    .offices__wrap .slick-arrow {
+        left: 122px;
+        outline: unset;
+    }
+    .offices__wrap .slick-arrow.slick-next {
+        left: 180px;
+    }
+    .offices {
+        margin-bottom: 140px;
     }
 }

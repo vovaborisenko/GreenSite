@@ -61,6 +61,7 @@
         width: 84px;
         height: 84px;
         background: url(../img/arrow_left.png) no-repeat 50% / cover;
+        outline: unset;
         transform: scale(0.73);
         cursor: pointer;
         &.right,
@@ -91,5 +92,20 @@
             margin-top: 61px;
             margin-bottom: 11px;
         }
+    }
+}
+@media all and (max-width: 1200px) {
+    .slide__head {
+        margin-top: 79px;
+        font-size: 17px;
+    }
+    .slide__text {        
+        font-size: 12.4px;        
+    }
+    .cars .head {
+        margin-top: 48px;
+    }
+    .cars .slide__head {
+        margin-top: 21px;
     }
 }

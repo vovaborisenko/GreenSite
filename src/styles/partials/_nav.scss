@@ -65,3 +65,14 @@
         }
     }
 }
+@media all and (max-width: 1200px) {
+    .nav__desktop {
+        min-width: 724px;
+    }
+    .desktop__item .link {
+        padding: 0 9px;
+    }
+    .desktop__item .desktop__item-parent {
+        padding: 50px 0px 30px 0px;
+    }
+}

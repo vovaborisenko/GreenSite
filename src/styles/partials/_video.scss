@@ -26,3 +26,12 @@
 .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
     background: $green-color;
 }
+@media all and (max-width: 1200px) {
+    .video .head {
+        margin-top: 95px;
+        margin-bottom: 30px;
+    }
+    .video .main {
+        padding: 0;
+    }
+}

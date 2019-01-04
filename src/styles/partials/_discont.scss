@@ -6,8 +6,7 @@
     }
     &__form {
         padding: 60px 40px 25px;
-        background: $white-color;
-        opacity: .87;
+        background: $transparentwhite-color;
     }
     .form {
         &__head {
@@ -36,4 +35,15 @@
             }
         }
     }           
+}
+@media all and (max-width: 1200px) {
+    .discont__container {
+        padding: 115px 0 80px;
+    }
+    .discont__form {
+        padding: 60px 30px 25px;
+    }
+    .discont .form__head {
+        color: #FF0000;
+    }
 }

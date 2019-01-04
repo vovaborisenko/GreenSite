@@ -54,3 +54,36 @@
         }
     }
 }
+@media all and (max-width: 1200px) {
+    .reviews .head {
+        margin-top: 0px;
+    }
+    .review {
+        padding: 0 5px 0 65px;
+        width: 32%;
+    }
+    .review:nth-child(3n-1) {
+        margin: 0;
+    }
+    .review__photo {
+        width: 50px;
+        clip-path: circle(25px at center);
+    }
+    .review__name {
+        font-size: 16px;
+    }
+    .review__city {
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+    .review__text {
+        font-size: 12px;
+    }
+    .review__date {
+        font-size: 11px;
+    }
+    .more {
+        margin-top: 18px;
+        text-align: center;
+    }
+}

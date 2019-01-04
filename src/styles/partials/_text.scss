@@ -4,3 +4,8 @@
     max-width: 990px;
     margin: 40px auto;
 }
+@media all and (max-width: 1200px) {
+    .text__text {
+        text-align: center;
+    }
+}

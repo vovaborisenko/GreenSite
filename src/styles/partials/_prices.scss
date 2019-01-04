@@ -45,3 +45,14 @@
         }
     }
 }
+@media all and (max-width: 1200px) {
+    .prices .head {
+        margin-top: 65px;
+    }
+    .price-block {
+        padding: 60px 10px;
+    }
+    .prices {
+        margin-bottom: 47px;
+    }
+}
