@@ -79,3 +79,56 @@
         background-color: $transparentwhite-color;
     }
 }
+@media all and (max-width: 768px) {
+    .banner {
+        .container {
+            padding-top: 0;
+        }
+        .banner {
+            &__container {
+                margin: 0;
+                width: 100%;
+            }
+            &__head {
+                font-size: 28px;
+            }
+            &__service {                
+                margin-top: 0;
+                font-size: 15px;
+                .service-icon {
+                    line-height: .9;
+                }
+            }
+            
+        }
+        .services__link {
+            font-size: 15px;
+        }
+    }
+}
+@media all and (max-width: 600px) {
+    .banner {
+        height: auto;
+        background: unset;
+        .banner__services {
+            width: 250px;
+            margin: 29px auto 36px;
+        }
+        .banner__service {
+            display: block;
+            width: 100%;
+        }
+        &__form {
+            display: none;
+        }
+        .form__input {
+            text-align: center;
+            &-phone {
+                width: 100%;
+            }
+            .send-phone {
+                position: static;
+            }
+        }
+    }
+}

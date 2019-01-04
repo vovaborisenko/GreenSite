@@ -92,7 +92,9 @@ html(lang="ru")
                 .form__input.form__input-phone              
                   input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Ваш телефон")
                   i.input-icon.icon-phone                
-                  button.send-phone вызвать срочно
+                  button.send-phone#call_banner вызвать срочно
+            .form__input.form__input-phone.unvisible                     
+              button.send-phone#call_banner_mobile вызвать срочно
       <!-- End Banner -->
       .text
         .container.text__container
@@ -104,7 +106,8 @@ html(lang="ru")
           .head
             span.grey Наши
             span.green  цены
-          .sub-head Закажите услугу и получите скидку 40%
+          .sub-head Закажите услугу и получите 
+            span.green-mobile  скидку 40%
           .prices__wrap
             .price-block
               i.price-block__icon.icon-door
@@ -128,7 +131,8 @@ html(lang="ru")
       .discont
         .container.discont__container
           .discont__form.form
-            .form__head.green Закажите услугу со скидкой 40%
+            .form__head.green Закажите услугу
+              span.green-mobile  со скидкой 40%
             .form__sub-head С нами надежно и выгодно
             .form__main
               .form__input.form__input-user
@@ -158,9 +162,9 @@ html(lang="ru")
           .head
             span.grey мы работаем
             span.green   с замками
-          .slider__controls.controls
-            .arrow.left
-            .arrow.right
+          //- .slider__controls.controls
+          //-   .arrow.left
+          //-   .arrow.right
           .slider__wrap
             .slide
               a.slide__link(href="#")
@@ -204,9 +208,9 @@ html(lang="ru")
           .head
             span.grey мы работаем
             span.green   с автомобилями
-          .slider__controls.controls
-            .arrow.left
-            .arrow.right
+          //- .slider__controls.controls
+          //-   .arrow.left
+          //-   .arrow.right
           .slider__wrap
             .slide
               a.slide__link(href="#")
@@ -298,6 +302,7 @@ html(lang="ru")
             label.tab(for="place1") Москва  
             input#place2(type="radio", name="place") 
             label.tab(for="place2") Подмосковье 
+            .offices__map
             .offices__wrap.section_1
               .office__data
                 .office__name.green 
@@ -354,7 +359,7 @@ html(lang="ru")
                 .office__phone
                   a(href="tel:")  + 495 333-33-33
               
-            .offices__map
+            
       <!-- End Map -->
     <!-- Footer -->
     footer.footer

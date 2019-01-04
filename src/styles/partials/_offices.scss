@@ -69,7 +69,7 @@
         padding-left: 360px;
         width: 56%;
         height: 100%;
-        background: url(../img/map.png) no-repeat;
+        background: url(../img/map.png) no-repeat 50%;
     }
 }
 .office {
@@ -142,5 +142,30 @@
     }
     .offices {
         margin-bottom: 140px;
+    }
+}
+@media all and (max-width: 768px) {
+    .offices .tab {
+        left: unset;
+    }
+    .offices__main {
+        text-align: center;
+    }
+    .office__data {
+        padding: 0;
+    }
+    .offices__map {
+        position: relative;
+        top: 52px;
+        width: 100%;
+        height: 342px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .offices__wrap .slick-arrow.slick-next {
+        left: 55%;
+    }
+    .offices__wrap .slick-arrow.slick-prev {
+        left: 35%;
     }
 }

@@ -109,3 +109,11 @@
         margin-top: 21px;
     }
 }
+@media all and (max-width: 600px) {
+    .slick-slider .slick-arrow.slick-next {
+        right: 35%;
+    }
+    .slick-slider .slick-arrow.slick-prev {
+        right: 55%;
+    }
+}

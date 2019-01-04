@@ -2,14 +2,14 @@
     text-align: center;
     .head {
         margin-top: 91px;
-        margin-bottom: 101px; 
+        margin-bottom: 81px; 
     }
 }
 .review {
     position: relative;
     display: inline-block;
     width: 30%;
-    padding: 9px 15px 0 108px;
+    padding: 29px 15px 0 108px;
     text-align: left;
     &:nth-child(3n-1) {
         margin: 0 30px;
@@ -17,7 +17,7 @@
     &__photo {
         position: absolute;
         left: 0;
-        top: 0;
+        top: 20;
         clip-path: circle(41px at center);
     }
     &__name {
@@ -59,7 +59,7 @@
         margin-top: 0px;
     }
     .review {
-        padding: 0 5px 0 65px;
+        padding: 20px 5px 0 65px;
         width: 32%;
     }
     .review:nth-child(3n-1) {
@@ -85,5 +85,11 @@
     .more {
         margin-top: 18px;
         text-align: center;
+    }
+}
+@media all and (max-width: 758px) {
+    .review {
+        width: 100%;
+        max-width: 320px;
     }
 }

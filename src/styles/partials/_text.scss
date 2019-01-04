@@ -9,3 +9,9 @@
         text-align: center;
     }
 }
+@media all and (max-width: 758px) {
+    .text__text {
+        line-height: 25px;
+        font-size: 14px;
+    }
+ }

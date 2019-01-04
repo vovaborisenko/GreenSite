@@ -1,6 +1,22 @@
 ( function($) { 
     /** утанавливаем слайдеры */
-    $('.slider__wrap').slick( {slidesToShow: 3} ); 
+    $('.slider__wrap').slick( {
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 2
+                }
+            },
+            {
+              breakpoint: 700,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+        ]
+    } ); 
     $('.offices__wrap').slick( {infinite: false} );
     setTimeout( () => $('.offices__wrap').addClass('section'), 2000 );
 
