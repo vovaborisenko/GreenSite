@@ -2,7 +2,42 @@
     position: relative;
     z-index: 5;    
 }
-
+.nav__mobile {
+    position: absolute;
+    padding: 15px 0;
+    width: 30px;
+    cursor: pointer;
+    transition: .2s;
+    &:hover {
+        .gamburger {
+            background-color: $green-color;
+        }
+    }
+    .gamburger {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $grey-color;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            transition: width .2s .4s, top .2s .2s, transform .2s;
+        }
+        &::before {
+            top: -10px;
+        }
+        &::after {
+            top: 10px;
+            width: 50%;
+        }
+    }
+    
+}
 .nav__desktop {
     position: absolute;
     left: 50%;
@@ -12,8 +47,10 @@
     color: $grey-color;
     box-shadow: 0px 1px 1px 1px $transparentblack-color;
     border-radius: 3px;
-    background-color: $white-color;    
+    background-color: $white-color; 
+    z-index: 5;   
 }
+
 
 .desktop__items {
     position: relative;
@@ -74,5 +111,85 @@
     }
     .desktop__item .desktop__item-parent {
         padding: 50px 0px 30px 0px;
+    }
+}
+@media all and (max-width: 768px) {
+    .nav {
+        position: static;
+    }
+    .nav__desktop {
+        display: none;
+        position: absolute;
+        left: unset;
+        transform: unset;
+        width: 100%;
+        font-size: 21.2px;
+        color: #494d4b;
+        box-shadow: 0 1px 1px 1px #00000020;
+        background-color: #fff; 
+        .desktop {
+            &__item {
+                display: block;
+                text-align: left;
+                &.open .desktop__item-parent{
+                    visibility: visible;
+                    opacity: 1;
+                    z-index: 5;
+                    height: 100%;
+                }
+                .link {                    
+                    border: none;
+                }
+                .desktop__item-parent {
+                    position: relative;
+                    left: 0;
+                    top: 20px;
+                    padding: 0;
+                    width: 100%;
+                    height: 0;
+                    background-color: #fff;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                    transition: .3s;
+                    .desktop__item {
+                        padding: 20px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }       
+    }
+    .nav__mobile {
+        display: block;
+        top: 20px;
+        right: 25px;
+    }
+    .open {
+        &:hover .gamburger {
+            background-color: transparent;
+        }
+        .gamburger {
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+                transition: top .2s .2s, transform .2s .4s;
+                background-color: $green-color;
+            }
+            &::after {
+                top: 0;
+                width: 100%;
+                transform: rotate(-45deg);
+                transition: width .2s, top .2s .2s, transform .2s .4s;
+                background-color: $green-color;
+            }
+        }
+    }
+    .nav__mobile.open ~ .nav__desktop {
+        display: block;
     }
 }

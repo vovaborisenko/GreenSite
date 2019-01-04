@@ -3,7 +3,7 @@ module.exports = function () {
         return new Promise((res, rej) => {
             $.browsersync.init({
                 server: "./dest/",
-                tunnel: true,
+                tunnel: "greensite",
                 port: 9000
             });
             res();

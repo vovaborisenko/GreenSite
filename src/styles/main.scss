@@ -51,8 +51,13 @@
 @import "./partials/offices";     
 @import "./partials/footer";     
 
-@media all and (max-width: 1200px) {                  
+@media all and (max-width: 1200px) {                   
     .container {
         max-width: 756px;
+    }
+}
+@media all and (max-width: 758px) {                  
+    .container {
+        margin: 0 5px;       
     }
 }
