@@ -36,6 +36,12 @@
 .unvisible {
     display: none;     
 }
+
+#map {
+    width: 100%;
+    height: 100%; 
+    background-color: grey;
+  }
       
 
 @import "./partials/header";                

@@ -90,7 +90,7 @@ html(lang="ru")
               .form__head Заполните форму и вызовите мастера
               .form__main
                 .form__input.form__input-phone              
-                  input.input.input-phone(type="tel" pattern="\+7495\d{7}" name="phone" placeholder="Ваш телефон")
+                  input.input.input-phone(type="tel" pattern="\\+7 \(\\d\\d\\d\) \\d\\d\\d-\\d\\d-\\d\\d" name="phone" placeholder="Ваш телефон")
                   i.input-icon.icon-phone                
                   button.send-phone#call_banner вызвать срочно
             .form__input.form__input-phone.unvisible 
@@ -140,7 +140,7 @@ html(lang="ru")
                 input.input.input-user(type="text" name="user" placeholder="Ваше имя")
                 i.input-icon.icon-user
               .form__input.form__input-phone  
-                input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Ваш телефон")
+                input.input.input-phone(type="tel" pattern="\\+7 \(\\d\\d\\d\) \\d\\d\\d-\\d\\d-\\d\\d" name="phone" placeholder="Ваш телефон")
                 i.input-icon.icon-phone                
                 button.send-phone Вызвать мастера
               .form__check
@@ -304,6 +304,7 @@ html(lang="ru")
             input#place2(type="radio", name="place") 
             label.tab(for="place2") Подмосковье 
             .offices__map
+              #map
             .offices__wrap.section_1.section
               .office__data
                 .office__name.green 
@@ -333,7 +334,7 @@ html(lang="ru")
                   a(href="tel:")  +7 495 333-33-33
             
             .offices__wrap.section_2.section
-              .office__data
+              .office__data(data-latlng="55.936948,37.2271271")
                 .office__name.green 
                   .name__point 
                     .point__text M
@@ -342,7 +343,7 @@ html(lang="ru")
                 .office__phone
                   a(href="tel:")  +7 495 888-88-88
 
-              .office__data
+              .office__data(data-latlng="55.6331196,37.4338186")
                 .office__name.green 
                   .name__point 
                     .point__text Л
@@ -351,7 +352,7 @@ html(lang="ru")
                 .office__phone
                   a(href="tel:")  +7 495 555-55-55
               
-              .office__data
+              .office__data(data-latlng="55.735152,37.436084")
                 .office__name.green 
                   .name__point 
                     .point__text Э
@@ -395,10 +396,12 @@ html(lang="ru")
           .form__head Введите телефон и вызовите мастера
           .form__main
             .form__input.form__input-phone              
-              input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Телефон")
+              input.input.input-phone(type="tel" pattern="\\+7 \(\\d\\d\\d\) \\d\\d\\d-\\d\\d-\\d\\d" name="phone" placeholder="Телефон")
               i.input-icon.icon-phone                
               button.send-phone вызвать срочно
         .footer__copy-right &copy; 2019-2022 &laquo;Служба замков&raquo;
   
     <!-- End Footer -->
     script(src="../dest/js/main.min.js")
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9KIwprYkVRHqc_vkz_IROBsznoNUIU1w&callback=initMap"></script>
+    
