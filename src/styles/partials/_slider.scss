@@ -60,21 +60,25 @@
         display: inline-block;
         width: 84px;
         height: 84px;
-        background: url(../img/arrow_left.png) no-repeat 50% / cover;
         outline: unset;
-        transform: scale(0.73);
         cursor: pointer;
         &.right,
         &.slick-next {
             right: 5%;
-            transform: rotate(180deg) scale(0.73);
+            background: url(../img/arrow_right.png) no-repeat 50% / cover;
+        }
+        &.left,
+        &.slick-prev {
+            background: url(../img/arrow_left.png) no-repeat 50% / cover;
         }
         &:hover {
-            background: url(../img/arrow_right_hover.png) no-repeat 50% / cover;
-            transform: none;
+            &.right,
+            &.slick-next {
+                background: url(../img/arrow_right_hover.png) no-repeat 50% / cover;
+            }
             &.left,
             &.slick-prev {
-                transform: rotateY(180deg);
+                background: url(../img/arrow_left_hover.png) no-repeat 50% / cover;
             }
         }
     }
@@ -111,9 +115,11 @@
 }
 @media all and (max-width: 600px) {
     .slick-slider .slick-arrow.slick-next {
-        right: 35%;
+        right: 50%;
+        transform: translateX(50%) translateX(50px);
     }
     .slick-slider .slick-arrow.slick-prev {
-        right: 55%;
+        right: 50%;
+        transform: translateX(50%) translateX(-50px);
     }
 }

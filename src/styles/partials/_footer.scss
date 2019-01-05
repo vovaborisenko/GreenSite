@@ -85,3 +85,23 @@
         display: block;
     }
 }
+@media all and (max-width: 758px) {
+    .footer {
+        &__menu {
+            display: none;
+        }
+        .form__input {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            .input {
+                margin-bottom: 5px; 
+            }
+            .send-phone {
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+}

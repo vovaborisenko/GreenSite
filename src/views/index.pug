@@ -15,7 +15,7 @@ html(lang="ru")
           i.icon-watch
           span.info__work-time
             |Круглосуточно
-          a.info__phone.phone(href="tel:84958888888")
+          a.info__phone.phone(href="tel:+74958888888")
             i.icon-phone
             span.phone__code 8 495
             span.phone__number 888-88-88
@@ -90,11 +90,12 @@ html(lang="ru")
               .form__head Заполните форму и вызовите мастера
               .form__main
                 .form__input.form__input-phone              
-                  input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Ваш телефон")
+                  input.input.input-phone(type="tel" pattern="\+7495\d{7}" name="phone" placeholder="Ваш телефон")
                   i.input-icon.icon-phone                
                   button.send-phone#call_banner вызвать срочно
-            .form__input.form__input-phone.unvisible                     
-              button.send-phone#call_banner_mobile вызвать срочно
+            .form__input.form__input-phone.unvisible 
+              a(href="#sendForm")                    
+                button.send-phone#call_banner_mobile вызвать срочно
       <!-- End Banner -->
       .text
         .container.text__container
@@ -128,7 +129,7 @@ html(lang="ru")
               a.price-block__link.green(href="#") Узнать больше
       <!-- End Prices -->
       <!-- Discont -->
-      .discont
+      .discont#sendForm
         .container.discont__container
           .discont__form.form
             .form__head.green Закажите услугу
@@ -303,7 +304,7 @@ html(lang="ru")
             input#place2(type="radio", name="place") 
             label.tab(for="place2") Подмосковье 
             .offices__map
-            .offices__wrap.section_1
+            .offices__wrap.section_1.section
               .office__data
                 .office__name.green 
                   .name__point 
@@ -311,7 +312,7 @@ html(lang="ru")
                   |Марксистская
                 .office__address ул. Марксистская, д 147а офис 155
                 .office__phone
-                  a(href="tel:")  + 495 888-88-88
+                  a(href="tel:")  +7 495 888-88-88
 
               .office__data
                 .office__name.green 
@@ -320,7 +321,7 @@ html(lang="ru")
                   |Ленинистская
                 .office__address ул. Ленинистская, д 155 офис 147ф
                 .office__phone
-                  a(href="tel:")  + 495 555-55-55
+                  a(href="tel:")  +7 495 555-55-55
               
               .office__data
                 .office__name.green 
@@ -329,9 +330,9 @@ html(lang="ru")
                   |Энгельсистская
                 .office__address ул. Энгельсистская, д 7з офис 14
                 .office__phone
-                  a(href="tel:")  + 495 333-33-33
+                  a(href="tel:")  +7 495 333-33-33
             
-            .offices__wrap.section_2
+            .offices__wrap.section_2.section
               .office__data
                 .office__name.green 
                   .name__point 
@@ -339,16 +340,16 @@ html(lang="ru")
                   |Марксистская
                 .office__address Одинцово, <br>ул. Марксистская, д 147а офис 155
                 .office__phone
-                  a(href="tel:")  + 495 888-88-88
+                  a(href="tel:")  +7 495 888-88-88
 
               .office__data
                 .office__name.green 
                   .name__point 
                     .point__text Л
                   |Ленинистская
-                .office__address Коралева, <br>ул. Ленинистская, д 155 офис 147ф
+                .office__address Королев, <br>ул. Ленинистская, д 155 офис 147ф
                 .office__phone
-                  a(href="tel:")  + 495 555-55-55
+                  a(href="tel:")  +7 495 555-55-55
               
               .office__data
                 .office__name.green 
@@ -357,7 +358,7 @@ html(lang="ru")
                   |Энгельсистская
                 .office__address Химки, <br>ул. Энгельсистская, д 7з офис 14
                 .office__phone
-                  a(href="tel:")  + 495 333-33-33
+                  a(href="tel:")  +7 495 333-33-33
               
             
       <!-- End Map -->
@@ -386,7 +387,7 @@ html(lang="ru")
               li.item
                 a.link(href="#") Отзывы
           .footer__info
-            a.info__phone.phone(href="tel:84958888888")
+            a.info__phone.phone(href="tel:+74958888888")
               span.phone__code 8 495
               span.phone__number.green  888-88-88
             .info__sub-text Круглосуточно
@@ -397,7 +398,7 @@ html(lang="ru")
               input.input.input-phone(type="tel" pattern="\+495\d{7}" name="phone" placeholder="Телефон")
               i.input-icon.icon-phone                
               button.send-phone вызвать срочно
-        .footer__copy-right &copy; 2019-2022 &laquo;Логотип&raquo;
+        .footer__copy-right &copy; 2019-2022 &laquo;Служба замков&raquo;
   
     <!-- End Footer -->
     script(src="../dest/js/main.min.js")

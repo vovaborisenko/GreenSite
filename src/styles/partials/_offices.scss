@@ -7,7 +7,10 @@
         margin-top: 130px;
     }
     .section {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: .2s;
     }
     input {
         display: none;
@@ -18,10 +21,14 @@
             }
         }
         &#place1:checked ~ .section_1 {
-            display: block;
+            visibility: visible;
+            opacity: 1;
+            height: auto;
         }
         &#place2:checked ~ .section_2 {
-            display: block;
+            visibility: visible;
+            opacity: 1;
+            height: auto;
         }
     }
     .tab {
@@ -70,6 +77,7 @@
         width: 56%;
         height: 100%;
         background: url(../img/map.png) no-repeat 50%;
+        z-index: 2;
     }
 }
 .office {
@@ -162,10 +170,15 @@
         padding: 0;
         margin: 0 auto;
     }
+    .office__name {
+        margin: 89px 0px 48px;
+    }
     .offices__wrap .slick-arrow.slick-next {
-        left: 55%;
+        left: 50%;
+        transform: translateX(-50%) translateX(50px);
     }
     .offices__wrap .slick-arrow.slick-prev {
-        left: 35%;
+        left: 50%;
+        transform: translateX(-50%) translateX(-50px);
     }
 }

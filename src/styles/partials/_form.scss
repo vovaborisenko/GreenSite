@@ -1,6 +1,9 @@
 .form__input {
     position: relative;
     display: inline-block;
+    &.unvisible {
+        display: none;
+    }
     .input-icon {
         position: absolute;
         left: 21px;

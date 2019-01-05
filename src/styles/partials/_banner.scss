@@ -81,6 +81,7 @@
 }
 @media all and (max-width: 768px) {
     .banner {
+        height: auto;
         .container {
             padding-top: 0;
         }
@@ -123,6 +124,9 @@
         }
         .form__input {
             text-align: center;
+            &.unvisible {
+                display: inline-block;
+            }
             &-phone {
                 width: 100%;
             }
