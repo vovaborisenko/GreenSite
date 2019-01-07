@@ -6,12 +6,12 @@
     .head {
         margin-top: 130px;
     }
-    .section {
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        transition: .2s;
-    }
+    // .section {
+    //     visibility: hidden;
+    //     opacity: 0;
+    //     height: 0;
+    //     transition: .2s;
+    // }
     input {
         display: none;
         &:checked + label {
@@ -20,16 +20,16 @@
                 width: 100%;
             }
         }
-        &#place1:checked ~ .section_1 {
-            visibility: visible;
-            opacity: 1;
-            height: auto;
-        }
-        &#place2:checked ~ .section_2 {
-            visibility: visible;
-            opacity: 1;
-            height: auto;
-        }
+        // &#place1:checked ~ .section_1 {
+        //     visibility: visible;
+        //     opacity: 1;
+        //     height: auto;
+        // }
+        // &#place2:checked ~ .section_2 {
+        //     visibility: visible;
+        //     opacity: 1;
+        //     height: auto;
+        // }
     }
     .tab {
         display: inline-block;
@@ -131,7 +131,7 @@
     }
     .offices .tab {
         top: 21px;
-        left: 430px;
+        left: 320px;
     }
     .offices__map {
         bottom: -130px;

@@ -6,7 +6,7 @@ html(lang="ru")
     header.header
       .container
         a.logo(href="/", title="Главная страница | Служба замков")
-          img.logo__img(src="../dest/img/logo.png", alt="Главная страница | Служба замков", title="Главная страница | Служба замков")
+          img.logo__img(src="../dest/img/logo.png", alt="Служба замков", title="Главная страница | Служба замков")
           .logo__name Служба замков
         .info
           i.icon-marker
@@ -90,7 +90,7 @@ html(lang="ru")
               .form__head Заполните форму и вызовите мастера
               .form__main
                 .form__input.form__input-phone              
-                  input.input.input-phone(type="tel" pattern="\\+7 \(\\d\\d\\d\) \\d\\d\\d-\\d\\d-\\d\\d" name="phone" placeholder="Ваш телефон")
+                  input.input.input-phone(type="tel", name="phone", placeholder="Ваш телефон")
                   i.input-icon.icon-phone                
                   button.send-phone#call_banner вызвать срочно
             .form__input.form__input-phone.unvisible 
@@ -129,7 +129,7 @@ html(lang="ru")
               a.price-block__link.green(href="#") Узнать больше
       <!-- End Prices -->
       <!-- Discont -->
-      .discont#sendForm
+      .discont.lazy#sendForm(data-src="../dest/img/bg_keys-in-door.png")
         .container.discont__container
           .discont__form.form
             .form__head.green Закажите услугу
@@ -137,10 +137,10 @@ html(lang="ru")
             .form__sub-head С нами надежно и выгодно
             .form__main
               .form__input.form__input-user
-                input.input.input-user(type="text" name="user" placeholder="Ваше имя")
+                input.input.input-user(type="text", name="user", placeholder="Ваше имя")
                 i.input-icon.icon-user
               .form__input.form__input-phone  
-                input.input.input-phone(type="tel" pattern="\\+7 \(\\d\\d\\d\) \\d\\d\\d-\\d\\d-\\d\\d" name="phone" placeholder="Ваш телефон")
+                input.input.input-phone(type="tel", name="phone", placeholder="Ваш телефон")
                 i.input-icon.icon-phone                
                 button.send-phone Вызвать мастера
               .form__check
@@ -154,8 +154,7 @@ html(lang="ru")
           .head Видео
           .main
             .plyr__video-embed#player
-              iframe(src="https://youtu.be/QpKZAFxZvVo" allowfullscreen allowtransparency allow="autoplay")
-            <script>const player = new Plyr('#player');</script>
+              iframe(src="https://youtu.be/QpKZAFxZvVo")
       <!-- End Video -->
       <!-- Locks -->
       .slider.locks
@@ -169,37 +168,37 @@ html(lang="ru")
           .slider__wrap
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/locks/lock_mottura.png")
+                img.slide__img(data-lazy="../dest/img/locks/lock_mottura.png")
                 .slide__head Mottura
                 .slide__text Время замены 20 минут
             
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/locks/lock_cisa.png")
+                img.slide__img(data-lazy="../dest/img/locks/lock_cisa.png")
                 .slide__head Cisa
                 .slide__text Время замены 20 минут
 
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/locks/lock_guardian.png")
+                img.slide__img(data-lazy="../dest/img/locks/lock_guardian.png")
                 .slide__head Guardian
                 .slide__text Время замены 20 минут
             
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/locks/lock_mottura.png")  
+                img.slide__img(data-lazy="../dest/img/locks/lock_mottura.png")  
                 .slide__head Mottura
                 .slide__text Время замены 20 минут
             
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/locks/lock_cisa.png")
+                img.slide__img(data-lazy="../dest/img/locks/lock_cisa.png")
                 .slide__head Cisa
                 .slide__text Время замены 20 минут
 
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/locks/lock_guardian.png")
+                img.slide__img(data-lazy="../dest/img/locks/lock_guardian.png")
                 .slide__head Guardian
                 .slide__text Время замены 20 минут
       <!-- End Locks -->
@@ -215,7 +214,7 @@ html(lang="ru")
           .slider__wrap
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/cars/car_hyundai.png")
+                img.slide__img(data-lazy="../dest/img/cars/car_hyundai.png")
                 .slide__head 
                   span.nostrong Hyundai 
                   | Cerato
@@ -223,23 +222,23 @@ html(lang="ru")
             
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/cars/car_bmw.png")
+                img.slide__img(data-lazy="../dest/img/cars/car_bmw.png")
                 .slide__head 
-                  span.nostrong BMW
+                  span.nostrong BMW 
                   | Series
                 .slide__text Время вскрытия 15 минут
 
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/cars/car_mercedes.png")
+                img.slide__img(data-lazy="../dest/img/cars/car_mercedes.png")
                 .slide__head 
-                  span.nostrong Mercedes
-                    | Benz
+                  span.nostrong Mercedes 
+                  | Benz
                 .slide__text Время вскрытия 17 минут
             
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/cars/car_hyundai.png")
+                img.slide__img(data-lazy="../dest/img/cars/car_hyundai.png")
                 .slide__head 
                   span.nostrong Hyundai 
                   | Cerato
@@ -247,17 +246,17 @@ html(lang="ru")
             
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/cars/car_bmw.png")
+                img.slide__img(data-lazy="../dest/img/cars/car_bmw.png")
                 .slide__head 
-                  span.nostrong BMW
+                  span.nostrong BMW 
                   | Series
                 .slide__text Время вскрытия 15 минут
 
             .slide
               a.slide__link(href="#")
-                img.slide__img(src="../dest/img/cars/car_mercedes.png")
+                img.slide__img(data-lazy="../dest/img/cars/car_mercedes.png")
                 .slide__head 
-                  span.nostrong Mercedes
+                  span.nostrong Mercedes 
                   | Benz
                 .slide__text Время вскрытия 17 минут
       <!-- End Car -->
@@ -269,21 +268,21 @@ html(lang="ru")
             span.green  клиентов
           .reviews__wrap
             .review
-              img.review__photo(src="../dest/img/avatars/avatar_1.png")
+              img.review__photo.lazy(data-src="../dest/img/avatars/avatar_1.png")
               .review__name Сергей Иванов
               .review__city Москва
               .review__text Вызывали мастера по вскрытию дверей. Работа была выполнена качественно и в срок. Будем обращаться и в дальнейшем.
               .review__date 21.12.2018
             
             .review
-              img.review__photo(src="../dest/img/avatars/avatar_2.png")
+              img.review__photo.lazy(data-src="../dest/img/avatars/avatar_2.png")
               .review__name Светлана Петрова
               .review__city Москва
               .review__text Вызывали мастера по вскрытию дверей. Работа была выполнена качественно и в срок. Будем обращаться и в дальнейшем.
               .review__date 21.12.2018
 
             .review
-              img.review__photo(src="../dest/img/avatars/avatar_3.png")
+              img.review__photo.lazy(data-src="../dest/img/avatars/avatar_3.png")
               .review__name Андрей Смирнов
               .review__city Москва
               .review__text Вызывали мастера по вскрытию дверей. Работа была выполнена качественно и в срок. Будем обращаться и в дальнейшем.
@@ -299,14 +298,16 @@ html(lang="ru")
             span.grey Наши
             span.green  офисы
           .offices__main
-            input#place1(type="radio", name="place" checked) 
-            label.tab(for="place1") Москва  
-            input#place2(type="radio", name="place") 
-            label.tab(for="place2") Подмосковье 
+            input#place1(type="radio", name="place") 
+            label.tab(for="place1" data-region="place1") Москва  
+            input#place3(type="radio", name="place") 
+            label.tab(for="place3" data-region="place3") Подмосковье
+            input#placeAll(type="radio", name="place" checked) 
+            label.tab(for="placeAll" data-region="placeAll") Все 
             .offices__map
               #map
             .offices__wrap.section_1.section
-              .office__data
+              .office__data(data-latlng="55.972948,37.291271", data-region="place1")
                 .office__name.green 
                   .name__point 
                     .point__text M
@@ -315,7 +316,7 @@ html(lang="ru")
                 .office__phone
                   a(href="tel:")  +7 495 888-88-88
 
-              .office__data
+              .office__data(data-latlng="55.94948,37.2971271", data-region="place1")
                 .office__name.green 
                   .name__point 
                     .point__text Л
@@ -324,7 +325,7 @@ html(lang="ru")
                 .office__phone
                   a(href="tel:")  +7 495 555-55-55
               
-              .office__data
+              .office__data(data-latlng="55.919948,37.2171271", data-region="place1")
                 .office__name.green 
                   .name__point 
                     .point__text Э
@@ -333,17 +334,16 @@ html(lang="ru")
                 .office__phone
                   a(href="tel:")  +7 495 333-33-33
             
-            .offices__wrap.section_2.section
-              .office__data(data-latlng="55.936948,37.2271271")
+              .office__data(data-latlng="55.936948,37.2271271", data-region="place3")
                 .office__name.green 
-                  .name__point 
+                  .name__point
                     .point__text M
                   |Марксистская
                 .office__address Одинцово, <br>ул. Марксистская, д 147а офис 155
                 .office__phone
                   a(href="tel:")  +7 495 888-88-88
 
-              .office__data(data-latlng="55.6331196,37.4338186")
+              .office__data(data-latlng="55.6331196,37.4338186", data-region="place3")
                 .office__name.green 
                   .name__point 
                     .point__text Л
@@ -352,7 +352,7 @@ html(lang="ru")
                 .office__phone
                   a(href="tel:")  +7 495 555-55-55
               
-              .office__data(data-latlng="55.735152,37.436084")
+              .office__data(data-latlng="55.735152,37.436084", data-region="place3")
                 .office__name.green 
                   .name__point 
                     .point__text Э
@@ -365,10 +365,11 @@ html(lang="ru")
       <!-- End Map -->
     <!-- Footer -->
     footer.footer
+      .before.lazy(data-src="../dest/img/bg_hand-key-door.png")
       .container.footer__container
         .footer__top
           a.footer__logo(href="/", title="Главная страница | Служба замков")
-            img.logo__img(src="../dest/img/logo_footer.png", alt="Главная страница | Служба замков", title="Главная страница | Служба замков")
+            img.logo__img.lazy(data-src="../dest/img/logo_footer.png", alt="Служба замков", title="Главная страница | Служба замков")
             .logo__name Служба замков
           .info__sub-text.unvisible Москва и Московская область
           nav.footer__menu
@@ -396,12 +397,17 @@ html(lang="ru")
           .form__head Введите телефон и вызовите мастера
           .form__main
             .form__input.form__input-phone              
-              input.input.input-phone(type="tel" pattern="\\+7 \(\\d\\d\\d\) \\d\\d\\d-\\d\\d-\\d\\d" name="phone" placeholder="Телефон")
+              input.input.input-phone(type="tel", name="phone", placeholder="Телефон")
               i.input-icon.icon-phone                
               button.send-phone вызвать срочно
         .footer__copy-right &copy; 2019-2022 &laquo;Служба замков&raquo;
   
     <!-- End Footer -->
+    script(src="../dest/libs/jquery/dist/jquery.min.js")
+    script(src="../dest/libs/jquery-lazy/jquery.lazy.min.js")
+    script(src="../dest/libs/slick-carousel/slick/slick.min.js")
+    link(rel="stylesheet", href="../dest/libs/plyr/dist/plyr.css")
+    script(src="../dest/libs/plyr/dist/plyr.min.js")
     script(src="../dest/js/main.min.js")
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9KIwprYkVRHqc_vkz_IROBsznoNUIU1w&callback=initMap"></script>
     

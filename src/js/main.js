@@ -1,6 +1,11 @@
 ( function($) {
+    /** lazyLoad */
+    $('.lazy').Lazy();
+    /** plyr video */
+    new Plyr('#player');
     /** утанавливаем слайдеры */
     $('.slider__wrap').slick( {
+        lazyLoad: 'ondemand',
         slidesToShow: 3,
         responsive: [
             {
@@ -17,7 +22,9 @@
             }
         ]
     });
-    $('.offices__wrap').slick( {} );
+    $('.offices__wrap').slick( {
+        infinite: false
+    } );
 
     /** открытие мобильного меню */
     let mobile = document.querySelector('.nav__mobile');
@@ -138,8 +145,6 @@
                 if (value.length === 12 || value.length === 15) {
                     value += '-';
                 }
-                
-                
             } else {
                 //e.preventDefault;
                 if ( value.length < 5 ) {
@@ -150,7 +155,10 @@
         })
     } )
 } )(jQuery);
-var offices = [];
+
+/**  работы */
+var offices = [],
+    markers = [];
 var map;
 
 function initMap() {
@@ -159,41 +167,70 @@ function initMap() {
     var moscow = {lat: 55.73946, lng: 37.6541889};
     map = new google.maps.Map(
         document.getElementById('map'),
-        {zoom: 15, center: moscow});
+        {zoom: 10, center: moscow});
     
-    office.forEach((el,ind,arr)=>{
+    office.forEach((el,ind,arr) => {
         if (el.dataset.latlng){
-           let el1 = el.dataset.latlng.split(',');
-            offices[ind] = {lat: Number(el1[0]), lng: Number(el1[1])};
-        }
-        
+            let [Lat, Lng] = el.dataset.latlng.split(',');
+            offices[ind] = {position: {lat:0,lng:0},slickIndex:'',region:''};
+            offices[ind].position = {lat: Number(Lat), lng: Number(Lng)};
+            offices[ind].slickIndex = el.dataset.slickIndex;
+            offices[ind].region = el.dataset.region;
+        }        
         
     })
     console.log(offices);
-
     
-    // The marker, positioned at Uluru
-    //var marker = new google.maps.Marker({position: moscow, map: map, icon: image, animation: google.maps.Animation.DROP});
-    
-    offices.forEach(office => {
-        new google.maps.Marker({
-            position: office,
+    offices.forEach((office, ind) => {
+        markers[ind] = {marker:'',region:'',slickIndex:''};
+        markers[ind].marker = new google.maps.Marker({
+            position: office.position,
             map: map,
             icon: image,
             // animation: google.maps.Animation.BOUNCE
-            });
-        }) 
-    }
-    document.addEventListener('click', () => {
-        if (document.querySelectorAll('.offices__wrap')[0].offsetHeight == 0) {
-            var latlng = document.querySelectorAll('.offices__wrap')[1].querySelector('.office__data.slick-current').dataset.latlng;
-            let el1 = latlng.split(',');
-            map.setCenter({lat: Number(el1[0]), lng: Number(el1[1])});
+        });
+        markers[ind].region = office.region;
+        markers[ind].slickIndex = office.slickIndex;
+        markers[ind].marker.addListener('click', (ev) => {
+            console.log(ev);
+            map.panTo(markers[ind].marker.position);
+            $('.offices__wrap').slick('slickGoTo', markers[ind].slickIndex);  
+        })
+    })
+    console.log(markers); 
+    updateCenterMap();
+}
 
+document.addEventListener('change', (e) => {
+    if (e.target.id) {
+        let offices__wrap = $('.offices__wrap');
+        offices__wrap.slick('slickUnfilter');
+        if (e.target.id !== 'placeAll') {
+            offices__wrap.slick('slickFilter',`[data-region=${e.target.id}]`);
         } else {
-            map.setCenter({lat: 55.735152, lng: 37.436084})
-        }
-    }, false);
+            offices__wrap.slick('slickFilter','.office__data');
+        };
+        console.log(e.target.id);
+        markers.forEach(marker => {
+            marker.marker.setVisible(false);
+            if (e.target.id === 'placeAll') {
+                marker.marker.setVisible(true);
+            } else if (marker.region === e.target.id) {
+                marker.marker.setVisible(true);
+            }
+        });
+        updateCenterMap();
+    }
+})
+$('.offices__wrap').on('afterChange', () => {
+    updateCenterMap();
+});
+/** функция считывает значение текущего слайда и перемещает центр карты */
+const updateCenterMap = () => {
+    let [Lat, Lng] = document.querySelector('.offices__wrap .slick-active').dataset.latlng.split(',');
+
+    map.panTo({lat: Number(Lat), lng: Number(Lng)});
+}
 
 //   let offices = [
 //     {lat: 55.7337722, lng: 37.6676417},
