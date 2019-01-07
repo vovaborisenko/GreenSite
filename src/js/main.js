@@ -65,8 +65,7 @@
         pattern = pattern.replace(/(.)/g,'\\$1');
         for (let i = 0; i <= pattern.length; i = i + 2) {
             const substr = pattern.substr(0, i);
-            arrPatterns.push({reg: new RegExp(`(${substr})`), length: substr.length/2});
-            // console.log(substr);            
+            arrPatterns.push({reg: new RegExp(`(${substr})`), length: substr.length/2});            
         }
 
         return arrPatterns;
@@ -156,7 +155,7 @@
     } )
 } )(jQuery);
 
-/**  работы */
+/**  работы над картой*/
 var offices = [],
     markers = [];
 var map;
@@ -178,8 +177,7 @@ function initMap() {
             offices[ind].region = el.dataset.region;
         }        
         
-    })
-    console.log(offices);
+    });
     
     offices.forEach((office, ind) => {
         markers[ind] = {marker:'',region:'',slickIndex:''};
@@ -192,12 +190,17 @@ function initMap() {
         markers[ind].region = office.region;
         markers[ind].slickIndex = office.slickIndex;
         markers[ind].marker.addListener('click', (ev) => {
-            console.log(ev);
+            let slickIndex = Number(markers[ind].slickIndex);
+
             map.panTo(markers[ind].marker.position);
-            $('.offices__wrap').slick('slickGoTo', markers[ind].slickIndex);  
+
+            if (document.querySelectorAll('.office__data').length < markers.length && slickIndex > document.querySelectorAll('.office__data').length-1) {
+                slickIndex -=  markers.length - document.querySelectorAll('.office__data').length;
+            };
+
+            $('.offices__wrap').slick('slickGoTo', slickIndex);  
         })
-    })
-    console.log(markers); 
+    }); 
     updateCenterMap();
 }
 
@@ -210,7 +213,6 @@ document.addEventListener('change', (e) => {
         } else {
             offices__wrap.slick('slickFilter','.office__data');
         };
-        console.log(e.target.id);
         markers.forEach(marker => {
             marker.marker.setVisible(false);
             if (e.target.id === 'placeAll') {
@@ -231,12 +233,3 @@ const updateCenterMap = () => {
 
     map.panTo({lat: Number(Lat), lng: Number(Lng)});
 }
-
-//   let offices = [
-//     {lat: 55.7337722, lng: 37.6676417},
-//     {lat: 55.734536, lng: 37.670839},
-//     {lat: 55.770434, lng: 37.662193},
-//     {lat: 55.936948, lng: 37.2271271},
-//     {lat: 55.6331196, lng: 37.4338186},
-//     {lat: 55.735152, lng: 37.436084},
-//   ]
