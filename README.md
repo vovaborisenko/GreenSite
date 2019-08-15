@@ -1,3 +1,3 @@
-![](https://i.imgur.com/IVgjvBO.jpg)
+![](https://i.imgur.com/0OWWQMX.jpg)
 # GreenSite
 Сайт по работе
